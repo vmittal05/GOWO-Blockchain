@@ -1,0 +1,34 @@
+namespace org.gowo.network.participants
+
+abstract participant GOWOParticipant identified by participantKey {
+  o String participantKey
+  o Contact personalDetails
+}
+
+participant GOWONetworkAdmins extends GOWOParticipant {
+
+}
+
+concept Contact {
+  o String fname
+  o String lname
+  o String email
+}
+
+participant GOWOFinanceMinistry extends GOWOParticipant {
+  o String post
+  o String batch
+  o String department
+}
+
+participant GOWOHomeMinistry extends GOWOParticipant {
+  o String post
+  o String batch
+  o String department
+}
+
+participant ICICIBank extends GOWOParticipant {
+  o String Branch
+  o String Position
+  o String TokenID
+}

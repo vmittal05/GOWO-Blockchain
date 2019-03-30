@@ -1,0 +1,29 @@
+namespace org.gowo.network.money
+
+asset Money identified by walletID {
+  o String walletID
+  o Integer amtToSend
+  o String senderID
+  o String recieverID
+  o DateTime transactionDate
+
+}
+
+enum Status {
+  o RECIEVED_TX
+  o PROCESSING_TX
+  o NEW_TX
+}
+
+transaction CreateTransaction {
+  o String walletID
+  o String senderID
+  o String recieverID
+  o Integer amtToSend
+  o DateTime transactionDate
+  o Status statusType default = "NEW_TX" 
+}
+
+event TransactionCreated {
+  o String walletID
+}

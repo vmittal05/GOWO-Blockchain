@@ -1,0 +1,26 @@
+namespace org.gowo.network.document
+
+asset Document identified by documentID {
+  o String documentID
+  o DateTime creationDate
+  o String origin 
+  o String destination
+}
+
+enum Status {
+  o FINISHED
+  o PROCESSING
+  o NEW
+}
+
+transaction CreateDocument {
+  o String documentID
+  o DateTime creationDate
+  o Status statusType default = "NEW"
+  o String origin 
+  o String destination
+}
+
+event DocumentCreated {
+  o String documentID
+}
