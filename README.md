@@ -1,8 +1,9 @@
 # Minor Project Workflow
 
 ## Things to do :
----
+
 1. ### Build Front-End to Interact with HLF
+---
   - Website/Web client that can perform actions like :
     1. Creating a transaction
     2. Show all transactions ( By Accessing historian)
@@ -13,6 +14,7 @@
 
 
 2. ### Simple Chain code Demonstration (NOT IN LECTURES)
+---
   - The chain code should be able to set up a simple contract between the government department , third party and the bank.
   - Third party should be chosen either by voting or by who is giving the best price + previous reputation.
   - Upon successful creation of asset from the third-party, the govt department will validate it and launch a transaction.
@@ -20,6 +22,7 @@
 
 
 3. ### Build Back-end JS files to complement Front-end
+---
   - Use Composer API or Rest-Server to make function calls to get following attributes (and others if needed in ) of the HLF:
     1. Get Registries
     2. Manage-Cards
@@ -32,7 +35,9 @@
 
 
 4. ### Final Model Files creation and Unit-testing using Mocha and Chai
-	- The Final Model files should contain every aspect/variable required to successfully demonstrate the chain code + general workings of the network
+---
+
+- The Final Model files should contain every aspect/variable required to successfully demonstrate the chain code + general workings of the network
 	- Please consult the group before doing any major changes or adding new features
 	- The important functions of the network like creating transactions, updating assets etc, should be unit-tested 
 	- Any additional features added like Private Key encryption or document storage should also be unit-tested
