@@ -2,9 +2,11 @@ namespace org.gowo.network.document
 
 asset Document identified by documentID {
   o String documentID
+  o String documentName
+  o String documentPath
   o DateTime creationDate
-  o String origin 
-  o String destination
+  o Status statusType default = "NEW"
+  o isVerified verifiedType default = "UNVERIFIED"
 }
 
 enum Status {
@@ -13,12 +15,15 @@ enum Status {
   o NEW
 }
 
+enum isVerified {
+  o UNVERIFIED
+  o VERIFIED
+}
+
 transaction CreateDocument {
   o String documentID
   o DateTime creationDate
   o Status statusType default = "NEW"
-  o String origin 
-  o String destination
 }
 
 event DocumentCreated {

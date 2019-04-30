@@ -1,6 +1,5 @@
 namespace org.gowo.network.participants
 import org.gowo.network.powerPlant.PowerPlant
-import org.gowo.network.powerPlant.PowerPlant
 
 
 abstract participant GOWOParticipant identified by participantKey {

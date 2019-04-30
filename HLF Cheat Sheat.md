@@ -20,14 +20,18 @@
 composer network upgrade -c PeerAdmin@hlfv1 -n airlinev9 -V 0.0.21
 
 
-### If Composer Playground not working :
+
+
+- ### If Composer Playground not working :
 ---
 
  - Clear Firefox cache
  - Uninstall all composer composer
  - Install latest version again
 
-### For Resetting Fabric and Composer :
+
+
+- ### For Resetting Fabric and Composer :
 ---
 
 - ./stopFabric.sh
@@ -39,5 +43,10 @@ composer network upgrade -c PeerAdmin@hlfv1 -n airlinev9 -V 0.0.21
 - npm install -g composer-playground
 - ./createPeerAdminCard.sh
 
+
+
+- ### Deleting extra Docker Containers 
+---
+-  docker rmi -f $(docker images | grep latest | tr -s ' ' | cut -d ' ' -f 3)
 
 

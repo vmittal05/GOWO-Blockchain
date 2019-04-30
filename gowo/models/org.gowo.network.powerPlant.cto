@@ -1,17 +1,28 @@
 namespace org.gowo.network.powerPlant
-import org.gowo.network.participants.GOWOHomeMinistry
+import org.gowo.network.document.Document
 
 asset PowerPlant identified by PPJID {
   o String PPJID
   o String tenderDescription
-  o JobDescription jobDescription default = "SERVICING"
+  o String jobName
+  o JobType jobType default = "SERVICING"
   o JobStatus jobStatus default = "NEW"
   o DateTime jobDeadline
   o String extraNotes
-  o String Officer --> GOWOHomeMinistry participants
+  o String[] Officers
 }
 
-enum JobDescription {
+concept AuthorityValidation {
+  o String[] DocumentID --> Document document
+  o isAllVerified status default = "UNVERIFIED"
+}
+
+enum isAllVerified {
+  o UNVERIFIED
+  o VERIFIED
+}
+
+enum JobType {
   o SERVICING
   o CONSTRUCTION
   o UPGRADATION
@@ -24,5 +35,15 @@ enum JobStatus {
 }
 
 transaction createPlantJob {
+  o String tenderDescription
+  o String jobName
+  o JobType jobType 
+  o JobStatus jobStatus
+  o DateTime jobDeadline
+  o String extraNotes
+  o String OfficerID
+}
+
+event jobCreated {
   o String PPJID
 }
