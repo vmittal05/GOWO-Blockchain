@@ -1,0 +1,28 @@
+namespace org.gowo.network.powerPlant
+import org.gowo.network.participants.GOWOHomeMinistry
+
+asset PowerPlant identified by PPJID {
+  o String PPJID
+  o String tenderDescription
+  o JobDescription jobDescription default = "SERVICING"
+  o JobStatus jobStatus default = "NEW"
+  o DateTime jobDeadline
+  o String extraNotes
+  o String Officer --> GOWOHomeMinistry participants
+}
+
+enum JobDescription {
+  o SERVICING
+  o CONSTRUCTION
+  o UPGRADATION
+}
+
+enum JobStatus {
+  o FINISHED
+  o PROCESSING
+  o NEW
+}
+
+transaction createPlantJob {
+  o String PPJID
+}
