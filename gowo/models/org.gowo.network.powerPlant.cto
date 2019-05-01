@@ -1,5 +1,6 @@
 namespace org.gowo.network.powerPlant
 import org.gowo.network.document.Document
+import org.gowo.network.participants.*
 
 asset PowerPlant identified by PPJID {
   o String PPJID
@@ -10,6 +11,7 @@ asset PowerPlant identified by PPJID {
   o DateTime jobDeadline
   o String extraNotes
   o String[] Officers
+        --> GOWOHomeMinistry[] user
 }
 
 concept AuthorityValidation {

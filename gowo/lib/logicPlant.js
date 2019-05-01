@@ -24,11 +24,12 @@
          
          PJOB.Officers = [plantJobData.OfficerID];
          
+        var   relationship = factory.newRelationship('org.gowo.network.participants','GOWOHomeMinistry',plantJobData.OfficerID);
+        PJOB.user = [relationship];
+   
          var event = factory.newEvent(NS, 'jobCreated');
          event.PPJID = PPJID;
          emit(event);
-
-        return plantRegistry.add(PJOB);
 
      });
  };
