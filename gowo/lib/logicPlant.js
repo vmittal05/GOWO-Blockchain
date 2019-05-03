@@ -31,6 +31,8 @@
          event.PPJID = PPJID;
          emit(event);
 
+         return plantRegistry.add(PJOB);
+
      });
  };
 
