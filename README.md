@@ -13,7 +13,7 @@
     2. Admin should be able to manage existing cards, create new participants etc
 
 
-2. ### Simple Chain code Demonstration (NOT IN LECTURES)
+2. ### Simple Chain code Demonstration
 ---
   - The chain code should be able to set up a simple contract between the government department , third party and the bank.
   - Third party should be chosen either by voting or by who is giving the best price + previous reputation.
